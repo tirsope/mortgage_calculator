@@ -19,4 +19,8 @@ class MortgageCalculatorTest < Minitest::Test
     assert_equal 4, @mc.interest_rate
   end
 
+  def test_access_to_mortgage_period_property
+    assert_equal 30, @mc.mortgage_period
+  end
+
 end
