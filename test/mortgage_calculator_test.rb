@@ -8,6 +8,11 @@ class MortgageCalculatorTest < Minitest::Test
   end
 
   def test_mc_instance
-    assert_instance_of MortgageCalculator, @mc
+    assert_instance_of MortgageCalculator, @mc, "mc expected to be an instance of MortgageCalculator Class"
   end
+
+  def test_access_to_principal_property
+    assert_equal 100000, @mc.principal
+  end
+
 end
