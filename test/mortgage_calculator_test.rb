@@ -15,4 +15,8 @@ class MortgageCalculatorTest < Minitest::Test
     assert_equal 100000, @mc.principal
   end
 
+  def test_access_to_interest_rate_property
+    assert_equal 4, @mc.interest_rate
+  end
+
 end

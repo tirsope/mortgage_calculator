@@ -1,6 +1,7 @@
 class MortgageCalculator
 
   attr_reader :principal
+  attr_reader :interest_rate
 
   def initialize(args)
     @principal = args[:principal]
