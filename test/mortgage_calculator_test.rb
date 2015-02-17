@@ -23,4 +23,8 @@ class MortgageCalculatorTest < Minitest::Test
     assert_equal 30, @mc.mortgage_period
   end
 
+  def test_calculate_monthly_interest_rate
+    assert_equal 0.003333333, @mc.monthly_interest_rate
+  end
+
 end

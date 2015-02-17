@@ -10,4 +10,8 @@ class MortgageCalculator
     @mortgage_period = args[:mortgage_period]
   end
 
+  def monthly_interest_rate
+    ((interest_rate / 100.0) / 12.0).round(9)
+  end
+
 end
