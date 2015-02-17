@@ -14,4 +14,8 @@ class MortgageCalculator
     ((interest_rate / 100.0) / 12.0).round(9)
   end
 
+  def number_of_payments
+    mortgage_period * 12
+  end
+
 end

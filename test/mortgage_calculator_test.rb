@@ -27,4 +27,8 @@ class MortgageCalculatorTest < Minitest::Test
     assert_equal 0.003333333, @mc.monthly_interest_rate
   end
 
+  def test_calculate_number_of_payments
+    assert_equal 360, @mc.number_of_payments
+  end
+
 end
