@@ -11,11 +11,15 @@ class MortgageCalculator
   end
 
   def monthly_interest_rate
-    ((interest_rate / 100.0) / 12.0).round(9)
+    ((interest_rate.to_f / 100) / 12)
   end
 
   def number_of_payments
     mortgage_period * 12
+  end
+
+  def term
+    ((1 + monthly_interest_rate) ** number_of_payments)
   end
 
 end

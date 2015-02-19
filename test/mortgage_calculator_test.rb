@@ -24,11 +24,15 @@ class MortgageCalculatorTest < Minitest::Test
   end
 
   def test_calculate_monthly_interest_rate
-    assert_equal 0.003333333, @mc.monthly_interest_rate
+    assert_in_delta 0.003333333, @mc.monthly_interest_rate, 0.01
   end
 
   def test_calculate_number_of_payments
     assert_equal 360, @mc.number_of_payments
+  end
+
+  def test_calculate_term
+    assert_in_delta 3.3134, @mc.term, 0.01
   end
 
 end
