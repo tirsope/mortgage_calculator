@@ -1,8 +1,6 @@
 class MortgageCalculator
 
-  attr_reader :principal
-  attr_reader :interest_rate
-  attr_reader :mortgage_period
+  attr_reader :principal, :interest_rate, :mortgage_period
 
   def initialize(args)
     @principal = args[:principal]
@@ -23,7 +21,11 @@ class MortgageCalculator
   end
 
   def monthly_payment
-    @principal * monthly_interest_rate * term / (term - 1)
+    principal * monthly_interest_rate * term / (term - 1)
+  end
+
+  def cost_of_loan
+    monthly_interest_rate * principal * number_of_payments / (1 - (1 + monthly_interest_rate) ** -number_of_payments)
   end
 
 end
