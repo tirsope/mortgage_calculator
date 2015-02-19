@@ -35,4 +35,8 @@ class MortgageCalculatorTest < Minitest::Test
     assert_in_delta 3.3134, @mc.term, 0.01
   end
 
+  def test_calculate_monthly_payment
+    assert_in_delta 477.42, @mc.monthly_payment, 0.01
+  end
+
 end

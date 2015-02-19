@@ -22,4 +22,8 @@ class MortgageCalculator
     ((1 + monthly_interest_rate) ** number_of_payments)
   end
 
+  def monthly_payment
+    @principal * monthly_interest_rate * term / (term - 1)
+  end
+
 end
